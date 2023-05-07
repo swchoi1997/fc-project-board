@@ -1,0 +1,25 @@
+version: '3.1'
+
+services:
+
+  db1:
+    image: mysql
+    container_name: mysql_board
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    restart: always
+    environment:
+      - MYSQL_DATABASE=mydb
+      - MYSQL_ROOT_PASSWORD=oracle
+    ports:
+      - "13306:3306"
+#  db2:
+#    image: postgres
+#    container_name: postgresql_test2
+#    restart: always
+#    environment:
+#      - POSTGRES_USER=oracle
+#      - POSTGRES_PASSWORD=oracle
+#    ports:
+#      - "35432:5432"
